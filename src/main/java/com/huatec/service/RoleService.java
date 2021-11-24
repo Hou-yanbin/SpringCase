@@ -8,5 +8,7 @@ public interface RoleService {
     List<Role> roleList();
 
     void saveRole(Role role);
-    void deleteRoleById(String roleId) throws Exception;;
+    void deleteRoleById(Long roleId);
+
+
 }

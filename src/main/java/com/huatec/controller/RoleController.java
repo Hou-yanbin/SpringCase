@@ -15,7 +15,7 @@ import java.util.List;
 @RequestMapping("/role")
 public class RoleController {
     @Autowired
-    private RoleService roleService;//
+    private RoleService roleService;
     @RequestMapping("/roleList")
     public ModelAndView showList(ModelAndView modelAndView){
        List<Role> roleList = roleService.roleList();
@@ -23,9 +23,10 @@ public class RoleController {
        modelAndView.setViewName("role-list");
         return modelAndView;
     }
+
 //    删除操作
     @RequestMapping("/deleteRole")
-    public String deleteRole(@RequestParam(name="id",required = true) String roleId) throws Exception {
+    public String deleteRole(@RequestParam(name="id",required = true) Long roleId) throws Exception {
         System.out.println(roleId);
         roleService.deleteRoleById(roleId);
         return "redirect:roleList";

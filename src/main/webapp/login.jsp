@@ -36,12 +36,12 @@
 			<form action="${pageContext.request.contextPath}/user/login"
 				method="post">
 				<div class="form-group has-feedback">
-					<input type="text" name="username" class="form-control"
+					<input type="text" name="username" value="jackhou" class="form-control"
 						placeholder="用户名"> <span
 						class="glyphicon glyphicon-envelope form-control-feedback"></span>
 				</div>
 				<div class="form-group has-feedback">
-					<input type="password" name="password" class="form-control"
+					<input type="password" name="password"  value="123" class="form-control"
 						placeholder="密码"> <span
 						class="glyphicon glyphicon-lock form-control-feedback"></span>
 				</div>

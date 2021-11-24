@@ -16,9 +16,14 @@
     <insert id="saveRole" parameterType="role">
         insert into sys_role values(#{id},#{roleName},#{roleDesc})
     </insert>
+    <!--删除角色对应关系表中数据-->
+    <delete id="deleteFromUser_RoleByRoleId" parameterType="long">
+        delete from sys_user_role where roleId=#{roleId}
+    </delete>
+
     <!--删除角色-->
-    <delete id="deleteRole" parameterType="role">
-        delete from sys_role where id=#{id}
+    <delete id="deleteRoleById" parameterType="long">
+        delete from sys_role where id=#{roleId}
     </delete>
 
 </mapper>

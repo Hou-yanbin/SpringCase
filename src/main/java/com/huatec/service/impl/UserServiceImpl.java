@@ -60,4 +60,13 @@ public class UserServiceImpl implements UserService {
         }
 
     }
+
+    @Override
+    public void deleteUserById(Long userId) {
+        //从sys_user中删除
+        userMapper.deleteUserById(userId);
+    }
+
+    //删除
+
 }

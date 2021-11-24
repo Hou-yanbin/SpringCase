@@ -21,9 +21,16 @@ public class RoleServiceImpl implements RoleService {
 
     //删除功能service
    @Override
-    public void deleteRoleById(String roleId) {
+    public void deleteRoleById(Long roleId) {
+
+        //根据roleId删除关系表数据
+        roleMapper.deleteFromUser_RoleByRoleId(roleId);
+
+        //从sys_user中删除
        roleMapper.deleteRoleById(roleId);
+
        System.out.println(roleId);
+
     }
     @Override
     public void saveRole(Role role) {

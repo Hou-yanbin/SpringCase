@@ -10,4 +10,6 @@ public interface UserService {
     void saveUser(User user, Long[] roleId);
 
     User login(String username, String password);
+    //删除
+    void deleteUserById(Long userId);
 }

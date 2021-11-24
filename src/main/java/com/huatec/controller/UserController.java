@@ -7,6 +7,7 @@ import com.huatec.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpSession;
@@ -55,5 +56,11 @@ public class UserController {
         return "redirect:/login.jsp";
 
     }
-
+    //删除用户·
+    @RequestMapping("/deleteUser")
+    public String deleteUser(@RequestParam(name="id",required = true) Long userId) throws Exception {
+        System.out.println(userId);
+        userService.deleteUserById(userId);
+        return "redirect:/user/userList";
+    }
 }

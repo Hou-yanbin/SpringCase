@@ -158,8 +158,8 @@
 												</c:forEach>
 											</td>
 											<td class="text-center">
-												<a href="javascript:void(0);" class="btn bg-olive btn-xs">删除</a>
-											</td>
+<%--												<a href="javascript:void(0);" class="btn bg-olive btn-xs">删除</a>--%>
+													<a href="${pageContext.request.contextPath}/user/deleteUser?id=${user.id}" class="btn bg-olive btn-xs">删除用户</a></td>
 										</tr>
 
 									</c:forEach>
