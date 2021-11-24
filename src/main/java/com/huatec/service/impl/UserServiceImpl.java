@@ -63,6 +63,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void deleteUserById(Long userId) {
+        //根据userId删除关系表数据
+        userMapper.deleteFromUser_RoleByUserId(userId);
         //从sys_user中删除
         userMapper.deleteUserById(userId);
     }

@@ -18,4 +18,6 @@ public interface UserMapper {
     void saveUserRoleRel(Map<String, Long> params);
 
     void deleteUserById(Long userId);
+
+    void deleteFromUser_RoleByUserId(Long userId);
 }
